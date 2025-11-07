@@ -1,0 +1,108 @@
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #f7f7f7, #e4e4e4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .maincontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 90vw; /* Responsive width (90% of viewport width) */
+        height: 90vw; /* Keep square shape */
+        max-width: 600px;
+        max-height: 600px;
+        background-color: white;
+        border: 10px solid black;
+        border-radius: 10px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .tdclass {
+        border: 6px solid rgb(205, 27, 27);
+        cursor: pointer;
+        text-align: center;
+        vertical-align: middle;
+        width: 33.33%;
+        height: 33.33%;
+        transition: background 0.2s ease-in-out;
+      }
+
+      .tdclass:hover {
+        background: rgba(205, 27, 27, 0.1);
+      }
+
+      .player1 {
+        color: blue;
+      }
+
+      .player2 {
+        color: red;
+      }
+
+      .common {
+        font-size: 10vw; /* responsive font size based on screen width */
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .resetbutton {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .resetbtn {
+        padding: 14px 60px;
+        font-size: 22px;
+        color: white;
+        background-color: rgb(205, 27, 27);
+        border: none;
+        border-radius: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .resetbtn:hover {
+        background-color: rgb(150, 20, 20);
+        transform: scale(1.05);
+      }
+
+      /* ✅ Responsive for small mobile screens */
+      @media (max-width: 480px) {
+        table {
+          width: 95vw;
+          height: 95vw;
+          border-width: 6px;
+        }
+
+        .tdclass {
+          border-width: 4px;
+        }
+
+        .common {
+          font-size: 18vw; /* larger font for smaller screens */
+        }
+
+        .resetbtn {
+          padding: 10px 40px;
+          font-size: 18px;
+        }
+      }
